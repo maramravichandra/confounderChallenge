@@ -418,7 +418,7 @@ plt.show()
 ```{r}
 #| label: fig-plot-outcomes-randomized-r
 #| fig-cap: "Post-Surgical Symptom Score (lower is better) for randomized patients."
-#| echo: false
+#| echo: false 
 
 suppressPackageStartupMessages(library(ggplot2))
 suppressPackageStartupMessages(library(dplyr))

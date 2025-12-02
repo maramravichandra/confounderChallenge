@@ -177,9 +177,11 @@ plt.show()
 #| label: fig-plot-outcomes-r
 #| fig-cap: "Post-Surgical Symptom Score (lower is better) - Observed Data"
 #| echo: false
+#| message: false
+#| warning: false
 
-library(ggplot2)
-library(dplyr)
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(dplyr))
 
 # Define colors and shapes
 color_dreamy <- '#4E79A7'
@@ -418,8 +420,8 @@ plt.show()
 #| fig-cap: "Post-Surgical Symptom Score (lower is better) for randomized patients."
 #| echo: false
 
-library(ggplot2)
-library(dplyr)
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(dplyr))
 
 # Define colors and shapes
 color_dreamy <- '#4E79A7'
@@ -442,8 +444,8 @@ ggplot(patients_randomized_df, aes(x = patient, y = post_surgical_score, color =
   scale_shape_manual(values = c('Doc Dreamy' = shape_dreamy, 'Doc Duck' = shape_duck)) +
   
   # Mean lines
-  geom_hline(yintercept = mean_dreamy_rand, color = color_dreamy, linetype = "dashed", size = 1) +
-  geom_hline(yintercept = mean_duck_rand, color = color_duck, linetype = "dashed", size = 1) +
+  geom_hline(yintercept = mean_dreamy_rand, color = color_dreamy, linetype = "dashed", linewidth = 1) +
+  geom_hline(yintercept = mean_duck_rand, color = color_duck, linetype = "dashed", linewidth = 1) +
   
   # Annotations for means
   annotate("text", x = 95, y = mean_dreamy_rand + 0.1, 
@@ -555,8 +557,8 @@ plt.show()
 #| fig-cap: "Post-Surgical Symptom Score (lower is better) by Patient and Severity"
 #| echo: false
 
-library(ggplot2)
-library(dplyr)
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(dplyr))
 
 # Define colors and shapes
 color_dreamy <- '#4E79A7'
